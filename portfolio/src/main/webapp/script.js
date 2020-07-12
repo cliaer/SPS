@@ -13,16 +13,16 @@
 // limitations under the License.
 
 /**
- * Adds a random greeting to the page.
+ * Adds a random favorite to the page.
  */
-function addRandomGreeting() {
-  const greetings =
-      ['Hello world!', 'surprise, its a wild claire!', '你好，世界！', 'i really like bunnies and birbs'];
+function addRandomFavorite() {
+  const favorites =
+      ['bunnies', 'surprise, its a wild claire!', 'bunnies of all kinds', 'birds', 'borbs', 'birbs', 'the color blue', 'swimming', 'videogames (message me if u wanna play)', 'my friends', 'my family', '<3'];
 
-  // Pick a random greeting.
-  const greeting = greetings[Math.floor(Math.random() * greetings.length)];
+  // Pick a random favorite.
+  const favorite = favorites[Math.floor(Math.random() * favorites.length)];
 
   // Add it to the page.
-  const greetingContainer = document.getElementById('greeting-container');
-  greetingContainer.innerText = greeting;
+  const favoriteContainer = document.getElementById('favorite-container');
+  favoriteContainer.innerText = favorite;
 }
