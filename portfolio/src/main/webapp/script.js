@@ -26,3 +26,9 @@ function addRandomFavorite() {
   const favoriteContainer = document.getElementById('favorite-container');
   favoriteContainer.innerText = favorite;
 }
+
+function getData() {
+  fetch('/data').then(response => response.text()).then((quote) => {
+    document.getElementById('data-container').innerText = quote;
+  });
+}
