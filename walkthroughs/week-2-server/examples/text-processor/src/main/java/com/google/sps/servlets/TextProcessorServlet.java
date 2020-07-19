@@ -57,7 +57,7 @@ public final class TextProcessorServlet extends HttpServlet {
   private String getParameter(HttpServletRequest request, String name, String defaultValue) {
     String value = request.getParameter(name);
     if (value == null) {
-      return defaultValue;
+      return defaultValue; 
     }
     return value;
   }

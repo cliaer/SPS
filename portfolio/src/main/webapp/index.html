@@ -11,8 +11,16 @@
       <h1>Claire's Portfolio</h1>
       <p>This is my portfolio. c:</p>
       <p>Click here to say hello</p>
-      <button onclick="getData()">hey there!</button>
-      <div id="data-container"></div>
+
+      <body onload="getData()">
+        Comments:
+        <form action="/data" method="POST">
+            <p>Enter your comment:</p>
+            <input type="text" name="user-comment">
+            <input type="submit" onclick="getData()"/>
+        </form>
+        <div id="data-container"></div>
+      </body>
       <p>Click here to get a random favorite thing of mine:</p>
       <button onclick="addRandomFavorite()">favorites!</button>
       <div id="favorite-container"></div>
@@ -27,6 +35,7 @@
         <p>Click <a href="images.html">here</a> to see some random stuff. birds, art, and me!</p>
     </div>
   </body>
+
   <body>
     <div id = "content">
         <h2>Where to find me! (Professionally)</h1>
