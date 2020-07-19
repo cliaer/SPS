@@ -39,9 +39,9 @@ function addRandomFavorite() {
 function getData() {
 	fetch('/data').then(response => response.json()).then((comments) => {
 		const commentElement = document.getElementById('data-container');
-		commentElement.innerText = '';
-        for (i = 0; i < comments.length; i++) {
-          commentElement.append(comments[i] + ". ");
-        }
+		commentElement.innerHTML = '';
+      for (i = 0; i < comments.length; i++) {
+        commentElement.innerHTML += comments[i] + '<br/>';
+      }
 	});
 }
