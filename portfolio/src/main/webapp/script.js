@@ -26,3 +26,23 @@ function addRandomFavorite() {
   const favoriteContainer = document.getElementById('favorite-container');
   favoriteContainer.innerText = favorite;
 }
+
+// function getData() {
+// 	fetch('/data').then(response => response.json()).then((comments) => {
+// 		console.log(comments[0]);
+// 		console.log(comments[1]);
+// 		console.log(comments[2]);
+// 		console.log(comments[3]);
+// 	});
+// }
+
+function getData() {
+	fetch('/data').then(response => response.json()).then((comments) => {
+		const commentElement = document.getElementById('data-container');
+		commentElement.innerHTML = '';
+		commentElement.append(comments[0] + " ");
+		commentElement.append(comments[1] + " ");
+		commentElement.append(comments[2] + " ");
+		commentElement.append(comments[3]);
+	});
+}
