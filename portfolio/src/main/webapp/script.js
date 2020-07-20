@@ -40,9 +40,8 @@ function getData() {
 	fetch('/data').then(response => response.json()).then((comments) => {
 		const commentElement = document.getElementById('data-container');
 		commentElement.innerHTML = '';
-		commentElement.append(comments[0] + " ");
-		commentElement.append(comments[1] + " ");
-		commentElement.append(comments[2] + " ");
-		commentElement.append(comments[3]);
+      for (i = 0; i < comments.length; i++) {
+        commentElement.innerHTML += comments[i] + '<br/>';
+      }
 	});
 }
